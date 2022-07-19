@@ -10,7 +10,9 @@
     <div class="weather-container" v-if="typeof currentWeather.main !== 'undefined'">
       <div class="place-text">{{ currentWeather.name }}, {{ currentWeather.sys.country }}</div>
       <div class="time-text">{{ getDate() }}</div>
-      <div class="temp">{{ Math.round(currentWeather.main.temp )}}°F</div>
+      <div class="temp-container">
+        <div class="temp">{{ Math.round(currentWeather.main.temp )}}°F</div>
+      </div>
       <div class="weather">{{ currentWeather.weather[0].main }}</div>
     </div>
   </div>
@@ -43,7 +45,7 @@ export default {
     setWeather(weather) {
       this.currentWeather = weather;
 
-      if (this.currentWeather.main.temp > 80) {
+      if (this.currentWeather.main.temp > 90) {
         this.temp = 'hot';
       } else if (this.currentWeather.main.temp < 50) {
         this.temp = 'cold';
@@ -93,7 +95,7 @@ export default {
   background-image: url("./assets/weather-norm.jpg");
 }
 
-.search, .place-text, .time-text, .temp, .weather {
+.search, .place-text, .time-text, .temp-container, .weather {
   display: flex;
   justify-content: center;
 }
@@ -104,6 +106,7 @@ export default {
 
 #search-bar {
   width: 80vw;
+  max-width: 500px;
   height: 6.5vh;
   border: none;
   border-radius: 10px;
@@ -128,7 +131,7 @@ export default {
 
 .place-text, .time-text, .temp, .weather {
   color: white;
-  text-shadow: 4px 4px 6px rgba(25, 1, 27, 0.7);
+  text-shadow: 4px 2px 2px rgba(25, 1, 27, 0.7);
 }
 
 .place-text, .weather {
@@ -140,17 +143,21 @@ export default {
 }
 
 .time-text {
-  opacity: .7;
+  text-shadow: 4px 4px 6px black;
+  opacity: .75;
   font-size: large;
   font-style: italic;
 }
 
 .temp {
-  margin: 4vh 30vw 3.5vh 30vw;
+  margin: 4vh 0 3.5vh 0;
+  padding: 10px;
+  line-height: 20vh;
   height: 20vh;
+  width: fit-content;
+  max-width: 275px;
   background-color:rgba(255, 255, 255, .7);
   border-radius: 30px;
-  align-items: center;
   font-size: 12vh;
   box-shadow: 3px 6px rgba(23, 0, 24, .75);
   font-weight: 600;
