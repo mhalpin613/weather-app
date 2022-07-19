@@ -1,4 +1,4 @@
-# weather-app
+A simple vue.js app that uses the openweather api to fetch and display weather.
 
 ## Project setup
 ```
@@ -19,6 +19,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
