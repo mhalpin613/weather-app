@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       api: 'e6620fd9081a23cc5aed1ebaf174c2e2',
-      apiURL: 'http://api.openweathermap.org/data/2.5/',
+      apiURL: 'https://api.openweathermap.org/data/2.5/',
       apiQuery: '',
       currentWeather: {},
       temp: '',
