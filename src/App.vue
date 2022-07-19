@@ -131,7 +131,7 @@ export default {
 
 .place-text, .time-text, .temp, .weather {
   color: white;
-  text-shadow: 4px 2px 2px rgba(25, 1, 27, 0.7);
+  text-shadow: 4px 2px 4px rgba(25, 1, 27, 0.7);
 }
 
 .place-text, .weather {
