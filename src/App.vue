@@ -155,7 +155,7 @@ export default {
   line-height: 20vh;
   height: 20vh;
   width: fit-content;
-  max-width: 275px;
+  max-width: 325px;
   background-color:rgba(255, 255, 255, .7);
   border-radius: 30px;
   font-size: 12vh;
