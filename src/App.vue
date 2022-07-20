@@ -153,9 +153,9 @@ export default {
   margin: 4vh 0 3.5vh 0;
   padding: 10px;
   line-height: 20vh;
-  height: 20vh;
+  height: fit-content;
   width: fit-content;
-  max-width: 325px;
+  max-width: 275px;
   background-color:rgba(255, 255, 255, .7);
   border-radius: 30px;
   font-size: 12vh;
